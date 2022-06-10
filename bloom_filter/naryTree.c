@@ -28,14 +28,12 @@ tree generate(int h){
     int o=h;
     tree t=(tree)malloc(sizeof(node));
     t->data=words[rand()%10000];
-    //printf("d: %s\n",t->data);
     t->n_child=rand()%4+1;
     t->next=NULL;
     t->child=NULL;
     t->b=(bloom_filter*)malloc(sizeof(bloom_filter));
     t->b=bloom_filter_new_default(1024);
     bloom_filter_put_str(t->b,t->data);
-    //printf("Lvl %d : %d\n",(o-h),1);
     Qnode f=(Qnode)malloc(sizeof(element));
     Qnode r=(Qnode)malloc(sizeof(element));
     SNode top;
@@ -52,17 +50,14 @@ tree generate(int h){
 
     while(h && size(f,r)){
         int z=size(f,r);
-        //printf("Size: %d\n",z);
         while(z--){
             tree n=pop(&f,&r);
             node *p,*q;
-            //printf("Lvl %d : %d\n",(o-h),n->n_child);
             if(n->n_child==0){
                 continue;
             }
             node *temp=(node *)malloc(sizeof(node));
             temp->data=words[rand()%10000];
-            //printf("d: %s\n",temp->data);
             temp->n_child=rand()%4;
             temp->next=NULL;
             temp->child=NULL;
@@ -75,11 +70,9 @@ tree generate(int h){
             push_s(&top,temp);
             c++;
             fprintf(fptr,"%s\n",temp->data);
-            //printf("ggg%d\n",size(f,r));
             for(int i=1;i<n->n_child;i++){
                 node *l=(node *)malloc(sizeof(node));
                 l->data=words[rand()%10000];
-                //printf("d: %s\n",l->data);
                 l->n_child=rand()%4;
                 l->next=NULL;
                 l->child=NULL;
@@ -99,7 +92,6 @@ tree generate(int h){
     }
     printf("No. %d\n",c);
     while(size_s(top)){
-        //printf("%d\n",size_s(top));
         if(top->t->child==NULL){
             top->t->n_child=0;
         }
@@ -130,7 +122,6 @@ void search(tree root,char *key,char **arr,int i){
         return;
     }
     else if(bloom_filter_test_str(root->b,key)){
-        //printf("%s\n",root->data);
         arr[i]=root->data;
         i++;
         tree p=root->child;

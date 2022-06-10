@@ -1,13 +1,3 @@
-# CC = gcc
-# CFLAGS = -Wall -Wextra -Werror
-
-# .o: @.c @.h
-# 	$(CC) $(CFLAGS) $@.c -o $@
-
-# OBJECTS = bitutil.o bloom.o hashf.o
-
-# bloom: $(OBJECTS)
-# 	$(CC) $(CFLAGS) $(OBJECTS) try.c -o try.out
 main: main.o naryTree.o queue.o stack.o bitutil.o hashf.o bloom.o
 	gcc -o main main.o naryTree.o queue.o stack.o bitutil.o hashf.o bloom.o
 main.o: main.c naryTree.h naryTree.c bloom.h bloom.c
