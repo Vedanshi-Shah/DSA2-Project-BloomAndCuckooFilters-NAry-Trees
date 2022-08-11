@@ -36,6 +36,5 @@ Efficient searching for data items in hierarchical data sets is facilitated by t
 Using these filters one can prune out subtrees that do not have the probability of containing the search element thereby reducing the search time greatly.
 
 ## References: <br/>
-1. Research Paper on Bloom Filters on Trees[https://american-cse.org/csci2015/data/9795a018.pdf]
-
+1.<a href="https://american-cse.org/csci2015/data/9795a018.pdf" target="_blank"> Research Paper on Bloom Filters on Trees</a>
 
