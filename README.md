@@ -36,5 +36,8 @@ Efficient searching for data items in hierarchical data sets is facilitated by t
 Using these filters one can prune out subtrees that do not have the probability of containing the search element thereby reducing the search time greatly.
 
 ## References: <br/>
-1.<a href="https://american-cse.org/csci2015/data/9795a018.pdf" target="_blank"> Research Paper on Bloom Filters on Trees</a>
+1. <a href="https://american-cse.org/csci2015/data/9795a018.pdf" target="_blank">Research Paper on Bloom Filters on Trees</a>
+2. <a href="https://www.cs.cmu.edu/~dga/papers/cuckoo-conext2014.pdf" target="_blank">Research Paper on Cuckoo Filters</a>
+3. https://www.andreinc.net/2022/03/01/on-implementing-bloom-filters-in-c
+4. https://www.sobyte.net/post/2022-01/go-cuckoo-filter/
 
