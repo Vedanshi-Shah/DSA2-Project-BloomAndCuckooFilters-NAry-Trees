@@ -31,5 +31,8 @@ Divison - 2 <br/>
 ![image](https://user-images.githubusercontent.com/77985799/184061441-37c27efb-934f-404e-8bd3-356d4e4ee2ee.png)
 <br/>
 
+## Conclusion: <br/>
+Efficient searching for data items in hierarchical data sets is facilitated by the application of bloom and cuckoo filters on the nodes of the N-Ary Tree.
+Using these filters one can prune out subtrees that do not have the probability of containing the search element thereby reducing the search time greatly.
 
 
