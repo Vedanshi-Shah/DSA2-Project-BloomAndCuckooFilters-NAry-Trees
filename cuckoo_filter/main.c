@@ -24,7 +24,7 @@ int main(){
     printf("Time to delete: %.7f\n",elapsed);
     printf("%d\n",cuckoo_lookup(t->c,"neighborhood",strlen("neighborhood")));
     search(t,"neighborhood",arr,0);
-    // //char **arr=(char **)malloc(sizeof(char *)*12);
+    // char **arr=(char **)malloc(sizeof(char *)*12);
     // for(int i=0;i<10;i++){
     //     arr[i]=(char *)malloc(sizeof(char)*100);
     // }
