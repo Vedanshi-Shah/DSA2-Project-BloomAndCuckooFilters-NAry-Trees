@@ -5,7 +5,10 @@
 #include <inttypes.h>
 int main(){
     parse();
-    tree t=generate(23);
+    int n=0;
+    printf("Enter value of n\n");
+    scanf("%d",&n);
+    tree t=generate(n);
     char **arr=(char **)malloc(sizeof(char *)*10);
     for(int i=0;i<10;i++){
         arr[i]=(char *)malloc(sizeof(char)*100);
